@@ -1,0 +1,4 @@
+[submodule "go-ipfs"]
+	path = go-ipfs
+	url = git@github.com:fission-suite/go-ipfs.git
+  branch = cbrake/404-experiments
