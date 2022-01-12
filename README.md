@@ -28,10 +28,11 @@ https://github.com/fission-suite/go-ipfs/pull/4
   http://localhost:8080/ipfs/SOMECID
   - this will serve the contents of the `index.html` file you uploaded.
 - getting a non-existant file should give you the contents of `ipfs-404.html`
-- browsing to http://localhost:8080/ipfs/SOMECID/test should redirect you to the
-  `/` and serve up the index file.
-- browsing to http://localhost:8080/ipfs/SOMECID/hi should redirect you to
-  `hi.html` and serve up the index file.
+- test [`_redirects`](test-ipfs-files/_redirects)
+  - browsing to http://localhost:8080/ipfs/SOMECID/test should redirect you to
+    the `/` and serve up the index file.
+  - browsing to http://localhost:8080/ipfs/SOMECID/hi should redirect you to
+    `hi.html` and serve up the index file.
 
 Note, every time you update or change a file in the test directory, the CID of
 the test directory changes!
