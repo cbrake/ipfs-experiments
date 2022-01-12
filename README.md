@@ -26,7 +26,7 @@ https://github.com/fission-suite/go-ipfs/pull/4
 - now you can modify link to browse on local http gateway by replacing
   https://ipfs.io with http://localhost:8080. Ex:
   http://localhost:8080/ipfs/QmYLBSwfVipdfZampxUfoDnMbEbiX9aVejHk3EBcBhJ4BQ
-  - this will provide a directory list of the files you uploaded
+  - this will serve the contents of the `index.html` file you uploaded.
 - getting a non-existant file should give you the contents of `ipfs-404.html`
 - browsing to
   `http://localhost:8080/ipfs/QmYLBSwfVipdfZampxUfoDnMbEbiX9aVejHk3EBcBhJ4BQ/test`
