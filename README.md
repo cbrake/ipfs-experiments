@@ -13,7 +13,7 @@ with IPFS.
 
 https://github.com/fission-suite/go-ipfs/pull/4
 
-## Set up IPFS directory to test basic redirects
+## Set up IPFS and test basic redirects
 
 - `. envsetup.sh`
 - `git submodule update --init`
