@@ -18,12 +18,20 @@ This repo is a simple wrapper repo used for my experiemnts with IPFS.
 - upload another real file to test -- say `print.pdf`
 - navigate up and click share link for `test` folder, you'll get something like:
   https://ipfs.io/ipfs/QmYLBSwfVipdfZampxUfoDnMbEbiX9aVejHk3EBcBhJ4BQ
-- now you can browser local http gateway:
+- now you can modify to browse on local http gateway by replacing
+  https://ipfs.io with http://localhost:8080. Ex:
   http://localhost:8080/ipfs/QmYLBSwfVipdfZampxUfoDnMbEbiX9aVejHk3EBcBhJ4BQ
   - this will provide a directory list of the files
 - you can get a file from the directory by doing fetching:
   https://ipfs.io/ipfs/QmYLBSwfVipdfZampxUfoDnMbEbiX9aVejHk3EBcBhJ4BQ/print.pdf
 - getting a non-existant file should give you the contents of ipfs-404.html
+
+## Notes on go-ipfs http gateway operation
+
+- if path is directory, and `index.html` exists in that dir, than that file is
+  served without a redirect
+- if file is not found in directory, then `ipfs-404.html` is served with `404`
+  code
 
 ## Re-directs
 
