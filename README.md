@@ -1,6 +1,7 @@
 # IPFS experiments
 
-This repo is a simple wrapper repo used for my experiemnts with IPFS.
+This repo is a simple wrapper repo and set of test files used for my experiemnts
+with IPFS.
 
 ## Reference
 
@@ -8,23 +9,33 @@ This repo is a simple wrapper repo used for my experiemnts with IPFS.
 - https://github.com/ipfs/specs/issues/257
 - https://github.com/ipfs/go-ipfs/issues/7392
 
+## Current work
+
+https://github.com/fission-suite/go-ipfs/pull/4
+
 ## Set up IPFS directory to test 404 handling
 
 - `. envsetup.sh`
 - `ipfs_build_and_run daemon`
 - open http://localhost:5001/webui in browser
 - create a new folder named `test`
-- upload ipfs-404.html to that folder
-- upload another real file to test -- say `print.pdf`
+- upload the contents of `test-ipfs-files` to your `test` folder in ipfs.
 - navigate up and click share link for `test` folder, you'll get something like:
   https://ipfs.io/ipfs/QmYLBSwfVipdfZampxUfoDnMbEbiX9aVejHk3EBcBhJ4BQ
 - now you can modify to browse on local http gateway by replacing
   https://ipfs.io with http://localhost:8080. Ex:
   http://localhost:8080/ipfs/QmYLBSwfVipdfZampxUfoDnMbEbiX9aVejHk3EBcBhJ4BQ
-  - this will provide a directory list of the files
-- you can get a file from the directory by doing fetching:
-  https://ipfs.io/ipfs/QmYLBSwfVipdfZampxUfoDnMbEbiX9aVejHk3EBcBhJ4BQ/print.pdf
-- getting a non-existant file should give you the contents of ipfs-404.html
+  - this will provide a directory list of the files you uploaded
+- getting a non-existant file should give you the contents of `ipfs-404.html`
+- browsing to
+  `http://localhost:8080/ipfs/QmYLBSwfVipdfZampxUfoDnMbEbiX9aVejHk3EBcBhJ4BQ/test`
+  should redirect you to the `/` and serve up the index file.
+- browsing to
+  `http://localhost:8080/ipfs/QmYLBSwfVipdfZampxUfoDnMbEbiX9aVejHk3EBcBhJ4BQ/hi`
+  should redirect you to `hi.html` and serve up the index file.
+
+Note, every time you update or change a file in the test directory, the CID of
+the test directory changes!
 
 ## Notes on go-ipfs http gateway operation
 
