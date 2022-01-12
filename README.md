@@ -13,16 +13,17 @@ with IPFS.
 
 https://github.com/fission-suite/go-ipfs/pull/4
 
-## Set up IPFS directory to test 404 handling
+## Set up IPFS directory to test basic redirects
 
 - `. envsetup.sh`
+- `git submodule update --init`
 - `ipfs_build_and_run daemon`
 - open http://localhost:5001/webui in browser
 - create a new folder named `test`
 - upload the contents of `test-ipfs-files` to your `test` folder in ipfs.
 - navigate up and click share link for `test` folder, you'll get something like:
   https://ipfs.io/ipfs/QmYLBSwfVipdfZampxUfoDnMbEbiX9aVejHk3EBcBhJ4BQ
-- now you can modify to browse on local http gateway by replacing
+- now you can modify link to browse on local http gateway by replacing
   https://ipfs.io with http://localhost:8080. Ex:
   http://localhost:8080/ipfs/QmYLBSwfVipdfZampxUfoDnMbEbiX9aVejHk3EBcBhJ4BQ
   - this will provide a directory list of the files you uploaded
