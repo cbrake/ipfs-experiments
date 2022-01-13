@@ -44,7 +44,11 @@ the test directory changes!
 - if file is not found in directory, then `ipfs-404.html` is served with `404`
   code
 
-## Re-directs
+## Reference of other implementations
+
+go has http.Redirect function.
+
+### Cloudflare
 
 Cloudflare supports a
 [`_redirects`](https://developers.cloudflare.com/pages/platform/redirects) file
@@ -65,4 +69,15 @@ Examples:
 /products/:code/:name /products?code=:code&name=:name
 ```
 
-go has http.Redirect function.
+Cloudflare plans to use 200 code (similiar to Netlify) for Proxying -- likely
+similiar to rewrite.
+
+### Netlify
+
+- https://docs.netlify.com/routing/redirects/rewrites-proxies/
+
+> When you assign an HTTP status code of 200 to a redirect rule, it becomes a
+> rewrite. This means that the URL in the visitor’s address bar remains the
+> same, while Netlify’s servers fetch the new location behind the scenes.
+
+Appears to use the `_redirects` file as well.
