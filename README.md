@@ -81,3 +81,11 @@ similiar to rewrite.
 > same, while Netlify’s servers fetch the new location behind the scenes.
 
 Appears to use the `_redirects` file as well.
+
+### NGINX
+
+https://nginx.org/en/docs/http/ngx_http_rewrite_module.html#rewrite
+
+### Caddy
+
+https://caddyserver.com/docs/caddyfile/matchers
