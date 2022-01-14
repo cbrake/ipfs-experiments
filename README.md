@@ -32,7 +32,9 @@ https://github.com/fission-suite/go-ipfs/pull/4
   - browsing to http://localhost:8080/ipfs/SOMECID/test should redirect you to
     the `/` and serve up the index file.
   - browsing to http://localhost:8080/ipfs/SOMECID/hi should redirect you to
-    `hi.html` and serve up the index file.
+    `hi.html` and serve up this file.
+  - browsing to http://localhost:8080/ipfs/SOMECID/hir should leave the URL the
+    same and serve the hi.html file contents.
 
 Note, every time you update or change a file in the test directory, the CID of
 the test directory changes!
