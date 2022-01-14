@@ -4,6 +4,9 @@ ipfs() {
 }
 
 ipfs_build_run() {
-  cd go-ipfs && make build && cd .. || return
+  if ! (cd go-ipfs && make build); then
+    echo "Error building go-ipfs"
+    return
+  fi
   ipfs "$@"
 }
