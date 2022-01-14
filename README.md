@@ -17,7 +17,7 @@ https://github.com/fission-suite/go-ipfs/pull/4
 
 - `. envsetup.sh`
 - `git submodule update --init`
-- `ipfs_build_and_run daemon`
+- `ipfs_build_and_run daemon` (this builds and runs ipfs)
 - open http://localhost:5001/webui in browser
 - create a new folder named `test`
 - upload the contents of `test-ipfs-files` to your `test` folder in ipfs.
