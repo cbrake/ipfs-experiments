@@ -1,3 +1,4 @@
-test / 301
-hi /hi.html 302
-hir /hi.html 200
+# redirects file
+test    /         301
+^/hir$  /hi.html  302
+^/hi    /hi.html  200
